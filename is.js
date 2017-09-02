@@ -20,6 +20,10 @@
     return this.checked;
   };
 
+  var isSelected = function() {
+    return this.selected;
+  };
+
   var matches = function(selector) {
     return (this.matches || this.matchesSelector || this.msMatchesSelector ||
             this.mozMatchesSelector || this.webkitMatchesSelector || this.oMatchesSelector)
