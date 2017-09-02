@@ -16,17 +16,30 @@
     return !isVisible.call(this);
   };
 
-  N.is.prototype = function(value) {
+  isChecked = function() {
+    return this.checked;
+  };
+
+  matches = function(selector) {
+    return (this.matches || this.matchesSelector || this.msMatchesSelector ||
+            this.mozMatchesSelector || this.webkitMatchesSelector || this.oMatchesSelector)
+           .call(this, selector);
+  };
+
+  N.is = function(value) {
     if (value.indexOf(':') === 0) {
       var options = {
         'first-child': isFirstChild,
         'last-child': isLastChild,
         'visible': isVisible,
-        'hidden': isHidden
+        'hidden': isHidden,
+        'checked': isChecked
       };
 
       return options[value.split(':')[1]].call(this);
     }
+
+    return matches.call(this, value);
   };
 
 }(window, document, Node.prototype));
