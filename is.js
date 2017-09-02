@@ -12,21 +12,29 @@
     return !!( this.offsetWith || this.offsetHeight || this.getClientRects().length );
   };
 
-  isHidden = function() {
+  var isHidden = function() {
     return !isVisible.call(this);
   };
 
-  isChecked = function() {
+  var isChecked = function() {
     return this.checked;
   };
 
-  matches = function(selector) {
+  var matches = function(selector) {
     return (this.matches || this.matchesSelector || this.msMatchesSelector ||
             this.mozMatchesSelector || this.webkitMatchesSelector || this.oMatchesSelector)
            .call(this, selector);
   };
 
+  var contains = function(value) {
+    return this.innerText.indexOf(value) >= 0;
+  };
+
   N.is = function(value) {
+    if (value.indexOf(':contains(') === 0) {
+      return contains.call(this, value.match(/\(\"(.*)\"\)$/)[1]);
+    }
+
     if (value.indexOf(':') === 0) {
       var options = {
         'first-child': isFirstChild,
