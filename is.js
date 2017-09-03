@@ -1,27 +1,29 @@
 (function(global, doc, N) {
 
-  var isFirstChild = function() {
-    return this.parentNode.firstElementChild === this;
-  };
+  var options = {
+    'first-child': function() {
+      return this.parentNode.firstElementChild === this;
+    },
 
-  var isLastChild = function() {
-    return this.parentNode.lastElementChild === this;
-  };
+    'last-child': function() {
+      return this.parentNode.lastElementChild === this;
+    },
 
-  var isVisible = function() {
-    return !!( this.offsetWith || this.offsetHeight || this.getClientRects().length );
-  };
+    'visible': function() {
+      return !!( this.offsetWith || this.offsetHeight || this.getClientRects().length );
+    },
 
-  var isHidden = function() {
-    return !isVisible.call(this);
-  };
+    'hidden': function() {
+      return !options.visible.call(this);
+    },
 
-  var isChecked = function() {
-    return this.checked;
-  };
+    'checked': function() {
+      return this.checked;
+    },
 
-  var isSelected = function() {
-    return this.selected;
+    'selected': function() {
+      return this.selected;
+    }
   };
 
   var matches = function(selector) {
@@ -40,15 +42,6 @@
     }
 
     if (value.indexOf(':') === 0) {
-      var options = {
-        'first-child': isFirstChild,
-        'last-child': isLastChild,
-        'visible': isVisible,
-        'hidden': isHidden,
-        'checked': isChecked,
-        'selected': isSelected
-      };
-
       return options[value.split(':')[1]].call(this);
     }
 
