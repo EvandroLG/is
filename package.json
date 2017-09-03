@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "jshint": "^2.9.5",
+    "node-qunit-phantomjs": "^1.5.0",
     "qunitjs": "^2.4.0",
     "uglify-js": "^3.0.28"
   }
