@@ -1,3 +1,12 @@
+/*
+  * is - A library to makes easy to check a element against a selector
+  * http://github.com/evandrolg/is
+  * author: Evandro Leopoldino Goncalves <evandrolgoncalves@gmail.com>
+  * http://github.com/evandrolg
+  * License: MIT
+*/
+
+
 (function(global, doc, N) {
 
   var getFirstElementChild = function(element) {
