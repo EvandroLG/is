@@ -1,11 +1,11 @@
 (function(global, doc, N) {
 
   var isFirstChild = function() {
-    return this.parentNode.firstChild === this;
+    return this.parentNode.firstElementChild === this;
   };
 
   var isLastChild = function() {
-    return this.parentNode.lastChild === this;
+    return this.parentNode.lastElementChild === this;
   };
 
   var isVisible = function() {
@@ -45,7 +45,8 @@
         'last-child': isLastChild,
         'visible': isVisible,
         'hidden': isHidden,
-        'checked': isChecked
+        'checked': isChecked,
+        'selected': isSelected
       };
 
       return options[value.split(':')[1]].call(this);
