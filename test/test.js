@@ -1,4 +1,4 @@
-(function(global, doc) {
+(function(global, doc, Q) {
 
   var fixture = doc.getElementById('qunit-fixture');
 
@@ -10,15 +10,15 @@
     assert.notOk(wrongEl.is(':' + position + '-child'));
   };
 
-  QUnit.test('first-child', function(assert) {
+  Q.test('first-child', function(assert) {
     verifyFirstOrLastChild(assert, 'first');
   });
 
-  QUnit.test('last-child', function(assert) {
+  Q.test('last-child', function(assert) {
     verifyFirstOrLastChild(assert, 'last');
   });
 
-  QUnit.test('visibility', function(assert) {
+  Q.test('visibility', function(assert) {
     var hiddenEl = fixture.querySelectorAll('li')[1];
     var visibleEl = fixture.querySelectorAll('li')[2];
 
@@ -29,23 +29,23 @@
     assert.notOk(hiddenEl.is(':visible'));
   });
 
-  QUnit.test('contains', function(assert) {
+  Q.test('contains', function(assert) {
     var el = fixture.querySelector('li:first-child');
     assert.ok(el.is(':contains("Script")'));
   });
 
-  QUnit.test('matches', function(assert) {
+  Q.test('matches', function(assert) {
     var el = fixture.querySelector('li:first-child');
     assert.ok(el.is('li'));
     assert.notOk(el.is('ul'));
   });
 
-  QUnit.test('checked', function(assert) {
+  Q.test('checked', function(assert) {
     var el = fixture.querySelector('li:first-child > input');
     assert.ok(el.is(':checked'));
   });
 
-  QUnit.test('selected', function(assert) {
+  Q.test('selected', function(assert) {
     var select = fixture.querySelector('select');
     var first = select.querySelector('option:first-child');
     var last = select.querySelector('option:last-child');
@@ -54,4 +54,4 @@
     assert.ok(last.is(':selected'));
   });
 
-}(window, document));
+}(window, document, window.QUnit));
