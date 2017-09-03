@@ -1,12 +1,52 @@
 (function(global, doc, N) {
 
+  var getFirstElementChild = function(element) {
+    if ('firstElementChild' in element) {
+      return element.firstElementChild;
+    }
+
+    var nodeList = element.childNodes;
+    var i = 0;
+    var node = nodeList[i++];
+
+    while (node) {
+      if (node.nodeType === 1) {
+        return node;
+      }
+
+      node = nodeList[i++];
+    }
+
+    return null;
+  };
+
+  var getLastElementChild = function(element) {
+    if ('lastElementChild' in element) {
+      return element.lastElementChild;
+    }
+
+    var nodeList = element.childNodes;
+    var i = nodeList.length - 1;
+    var node = nodeList[i--];
+
+    while (node) {
+      if (node.nodeType === 1) {
+        return node;
+      }
+
+      node = nodeList[i--];
+    }
+
+    return null;
+  };
+
   var options = {
     'first-child': function() {
-      return this.parentNode.firstElementChild === this;
+      return getFirstElementChild(this.parentNode) === this;
     },
 
     'last-child': function() {
-      return this.parentNode.lastElementChild === this;
+      return getLastElementChild(this.parentNode) === this;
     },
 
     'visible': function() {
