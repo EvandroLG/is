@@ -6,6 +6,7 @@ TEST=./node_modules/node-qunit-phantomjs/bin/node-qunit-phantomjs
 
 jshint:
 	$(JSHINT) is.js
+	echo "runned!"
 
 minify:
 	$(UGLIFY) is.js --mangle --output is.min.js
