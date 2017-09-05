@@ -1,4 +1,12 @@
 {
+  "name": "is",
+  "author": "evandrolg",
+  "repository": "evandrolg/is",
+  "version": "1.0.0",
+  "main": "src/is.js",
+  "keywords": ["is", "match", "filtering", "traversing", "front-end", "dom"],
+  "Licence": "MIT",
+
   "devDependencies": {
     "jshint": "^2.9.5",
     "node-qunit-phantomjs": "^1.5.0",
