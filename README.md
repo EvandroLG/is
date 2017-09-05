@@ -25,28 +25,28 @@ Or pick up the minified file.
 `is` doesn't depend on jQuery or any other library to work. You need only to include the script at the end of your HTML code. Then it will add the method `.is()` in the Node object.
 
 ## Parameters
-* `.is(":first-child"):Boolean`
+* `.is(":first-child"):Boolean`<br>
 Checks whether the element is the first child element
 
-* `.is(":last-child"):Boolean`
+* `.is(":last-child"):Boolean`<br>
 Checks whether the element is the last child element
 
-* `.is(":visible"):Boolean`
+* `.is(":visible"):Boolean`<br>
 Returns true whether the element is visible; if not, it returns false
 
-* `.is(":hidden"):Boolean`
+* `.is(":hidden"):Boolean`<br>
 Returns true whether the element is hidden; if not, it returns false
 
-* `.is(":checked"):Boolean`
+* `.is(":checked"):Boolean`<br>
 Checks whether the element is checked
 
-* `.is(":checked"):Boolean`
+* `.is(":checked"):Boolean`<br>
 Checks whether the element is selected
 
-* `.is(':contains("<String>")'):Boolean`
+* `.is(':contains("<String>")'):Boolean`<br>
 Returns true whether part of the string exists in the element; false, if not
 
-* `.is("<Selector>"):Boolean`
+* `.is("<Selector>"):Boolean`<br>
 Receives a valid selector and returns true if there's match from the given argument.
 
 ## Licence
