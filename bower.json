@@ -1,0 +1,11 @@
+{
+  "name": "is",
+  "version": "1.0.0",
+  "homepage": "https://github.com/EvandroLG/is",
+  "authors": [ "evandrolg" ],
+  "description": "Simple way to check whether the current element matched against a selector",
+  "main": "src/is.min.js",
+  "keywords": ["is", "match", "filtering", "traversing", "front-end", "dom"],
+  "ignore": ["**/.*", "test", "*.md"],
+  "license": "MIT"
+}
