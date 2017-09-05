@@ -1,5 +1,5 @@
 /*
-  * is - A library to makes easy to check a element against a selector
+  * is - Simple way to check whether the current element matched against a selector
   * http://github.com/evandrolg/is
   * author: Evandro Leopoldino Goncalves <evandrolgoncalves@gmail.com>
   * http://github.com/evandrolg
