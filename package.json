@@ -1,6 +1,7 @@
 {
-  "name": "is",
+  "name": "is_dom",
   "author": "evandrolg",
+  "description": "Simple way to check whether the current element matched against a selector",
   "repository": "evandrolg/is",
   "version": "1.0.0",
   "main": "src/is.js",
