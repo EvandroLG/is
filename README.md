@@ -4,12 +4,12 @@ Inspired by jQuery method `.is()`, this library is a simple way to check whether
 # Installation
 To install `is`, simply execute:
 ```shell
-  npm install is
+  npm install is_dom
 ```
 
 or Bower too:
 ```shell
-  bower install is
+  bower install is-dom
 ```
 
 Or pick up the minified file.
