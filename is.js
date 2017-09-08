@@ -75,9 +75,19 @@
     }
   };
 
+  var matchesSelector = function(selector) {
+    var matches = doc.querySelectorAll(selector);
+    var i = matches.length;
+
+    while (--i >= 0 && matches.item(i) !== this) {}
+
+    return i > -1;
+  };
+
   var matches = function(selector) {
     return (this.matches || this.matchesSelector || this.msMatchesSelector ||
-            this.mozMatchesSelector || this.webkitMatchesSelector || this.oMatchesSelector)
+            this.mozMatchesSelector || this.webkitMatchesSelector ||
+            this.oMatchesSelector || matchesSelector)
            .call(this, selector);
   };
 
