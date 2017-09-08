@@ -3,7 +3,7 @@
   "author": "evandrolg",
   "description": "Simple way to check whether the current element matched against a selector",
   "repository": "evandrolg/is",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/is.js",
   "keywords": ["is", "match", "filtering", "traversing", "front-end", "dom"],
   "Licence": "MIT",

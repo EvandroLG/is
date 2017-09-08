@@ -1,6 +1,6 @@
 {
   "name": "is-dom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/EvandroLG/is",
   "authors": [ "evandrolg" ],
   "description": "Simple way to check whether the current element matched against a selector",
