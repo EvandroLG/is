@@ -1,6 +1,6 @@
 # is
 [![Build
-Status](https://travis-ci.org/evandrolg/is.svg?branch=master)](https://travis-ci.org/evandrolg/is)
+Status](https://travis-ci.org/EvandroLG/is.svg?branch=master)](https://travis-ci.org/EvandroLG/is)
 
 Inspired by jQuery method `.is()`, this library is a simple way to check whether the current element matched against a selector.
 
