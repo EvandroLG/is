@@ -43,7 +43,7 @@ Returns true whether the element is hidden; if not, it returns false
 * `.is(":checked"):Boolean`<br>
 Checks whether the element is checked
 
-* `.is(":checked"):Boolean`<br>
+* `.is(":selected"):Boolean`<br>
 Checks whether the element is selected
 
 * `.is(':contains("<String>")'):Boolean`<br>
